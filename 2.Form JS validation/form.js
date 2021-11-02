@@ -69,28 +69,16 @@ function checkAll(event) {
     const passwordCopy = document.getElementById("passwordCopy").value;
     const phone = document.getElementById("phoneNumber").value;
 
-    validateUserName(userName);
-    validateUserSurName(surname);
-    validateLogin(login);
-    validatePassword(password);
-    validatePasswordMatch(passwordCopy);
-    validatePhone(phone);
+    let result = validateUserName(userName) 
+    && validateUserSurName(surname) 
+    && validateLogin(login) 
+    && validatePassword(password)
+    && validatePasswordMatch(passwordCopy)
+    && validatePhone(phone)
 
-    if (validateUserName(userName) === false) {
-        return;
-    } else if (validateUserSurName(surname) === false) {
-        return;
-    } else if (validateLogin(login) === false) {
-        return;
-    } else if (validatePassword(password) === false) {
-        return;
-    } else if (validatePasswordMatch(passwordCopy) === false) {
-        return;
-    } else if (validatePhone(phone) === false) {
-        return;
-    } else {
-        alert(`Добро пожаловать, ${userName}!`);
-    }
+if (result) {
+    alert(`Добро пожаловать, ${userName}!`)
+}
 }
 
 document.getElementById("submit").onclick = checkAll;
