@@ -1,14 +1,5 @@
-const userName = document.getElementById("userName").value;
-const surname = document.getElementById("userSurname").value;
-const login = document.getElementById("userLogin").value;
-const password = document.getElementById("password").value;
-const passwordCopy = document.getElementById("passwordCopy").value;
-const phone = document.getElementById("phoneNumber").value;
-
-
 let validateUserName = (userName) => {
-    let namePattern = /^[a-zA-Z]+$/;
-    if (userName.match(namePattern)) {
+    if (userName != "") {
         return true;
     } else {
         document.getElementById('nameError').innerText = "Ваше имя введено некорректно";
@@ -18,8 +9,7 @@ let validateUserName = (userName) => {
 }
 
 let validateUserSurName = (surname) => {
-    let surnamePattern = /^[A-ЯЁ][а-яё]+\s[A-ЯЁ][а-яё]+$/;
-    if (surname.match(surnamePattern)) {
+    if (surname != "") {
         return true;
     } else {
         document.getElementById('surNameError').innerText = "Ваша фамилия введена некорректно";
@@ -29,8 +19,7 @@ let validateUserSurName = (surname) => {
 }
 
 let validateLogin = (login) => {
-    let loginPattern = /^[a-z]+([-_]?[a-z0-9]+){0,2}$/i;
-    if (login.match(loginPattern)) {
+    if (login != "") {
         return true;
     } else {
         document.getElementById('loginError').innerText = "Ваш логин введен некорректно";
@@ -73,24 +62,20 @@ let validatePhone = (phone) => {
 
 function checkAll(event) {
     event.preventDefault();
-    let inputs = document.querySelectorAll("input");
-    for (let input of inputs) {
-        validateUserName(userName);
-        validateUserSurName(surname);
-        validateLogin(login);
-        validatePassword(password);
-        validatePasswordMatch(passwordCopy);
-        validatePhone(phone);
-    }
+    const userName = document.getElementById("userName").value;
+    const surname = document.getElementById("userSurname").value;
+    const login = document.getElementById("userLogin").value;
+    const password = document.getElementById("password").value;
+    const passwordCopy = document.getElementById("passwordCopy").value;
+    const phone = document.getElementById("phoneNumber").value;
 
-}
+    validateUserName(userName);
+    validateUserSurName(surname);
+    validateLogin(login);
+    validatePassword(password);
+    validatePasswordMatch(passwordCopy);
+    validatePhone(phone);
 
-document.getElementById("submit").onclick = checkAll;
-
-
-
-/* 
-function checkAll(event) {
     if (validateUserName(userName) === false) {
         return;
     } else if (validateUserSurName(surname) === false) {
@@ -106,5 +91,6 @@ function checkAll(event) {
     } else {
         alert(`Добро пожаловать, ${userName}!`);
     }
+}
 
-} */
+document.getElementById("submit").onclick = checkAll;
