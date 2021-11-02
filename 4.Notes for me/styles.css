@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: brown;
+}
+
+form {
+    margin: 10px;
+}
+

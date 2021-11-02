@@ -1,0 +1,43 @@
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+h6 {
+    color: rgb(177, 172, 172);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50vw;
+    padding: 20px;
+    /*background-color: rgb(243, 243, 231);*/
+}
+
+input {
+    margin-bottom: 30px;
+    border: none;
+}
+
+.btn {
+    margin: 10px 30px 30px 30px;
+}
+
+.error {
+    color: red;
+}

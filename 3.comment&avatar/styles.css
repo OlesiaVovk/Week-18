@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+#avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+}
+
+button {
+    margin: 10px 0px;
+}
+
+.upload,
+.chat {
+    margin-bottom: 20px;
+}
+
+.owner {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+

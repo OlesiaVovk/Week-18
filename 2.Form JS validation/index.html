@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <h2>Регистрация</h2>
+            <div>
+                <input type="text" size="45" placeholder="Имя" id="userName" validity />
+            </div>
+            <div id="nameError" class="error"></div>
+            <div>
+                <input type="text" size="45" placeholder="Фамилия" id="userSurname" validity />
+            </div>
+            <div id="surNameError" class="error"></div>
+            <div>
+                <input type="text" size="45" placeholder="Придумайте логин" id="userLogin" validity />
+            </div>
+            <div id="loginError" class="error"></div>
+            <div>
+                <input type="password" size="45" placeholder="Придумайте пароль" id="password" validity />
+            </div>
+            <div id="passwordError" class="error"></div>
+            <div>
+                <input type="password" size="45" placeholder="Повторите пароль" id="passwordCopy" validity />
+            </div>
+            <div id="passwordCopyError" class="error"></div>
+            <div>
+                <input type="tel" size="45" placeholder="Номер мобильного телефона" id="phoneNumber" min='11' max='18'
+                    validity />
+            </div>
+            <div id="phoneError" class="error"></div>
+            <div>
+                <input type="submit" class="btn btn-warning btn-lg" id="submit" value="Зарегистрироваться" />
+            </div>
+            <fieldset>
+                <legend>
+                    <h6>Нажимая кнопку "Зарегистрироваться"</h6>
+                </legend>
+                <label><input type="checkbox" checked="checked" name="toAccepted" value="on1" /> Я принимаю условия
+                    Пользовательского
+                    соглашения и
+                    даю своё согласие на обработку моей персональной информации на условиях, определенных
+                    Политикой
+                    конфиденциальности.</label><br>
+                <label><input type="checkbox" name="noAdd" value="on2" /> Я не хочу получать рекламу и другие
+                    предложения
+                    данного сервиса</label>
+            </fieldset>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="form.js"></script>
+
+</body>
+
+</html>

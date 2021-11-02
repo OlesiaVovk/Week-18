@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мяу!</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/1893/1893456.png" type="image/png">
+    <link rel="stylesheet" href="styles.css"
+</head>
+
+<body>
+    <header>
+        <h1>Опросник для владельцев котиков</h1>
+    </header>
+    <main>
+        <form action="form.php" method="get">
+            <fieldset>
+                <legend>Информация о владельце</legend>
+                <div>
+                    <label for="ownername">Имя</label><br>
+                    <input type="text" name="name" size="50" id="ownername" required/>
+                </div>
+                <div>
+                    <label for="phonenumber">Номер телефона</label><br>
+                    <input type="number" name="phone" size="20" id="phonenumber" required/>
+                </div>
+                <div>
+                    <label for="email">Электронный адрес</label><br>
+                    <input type="text" name="email" size="50" id="email" required/>
+                </div>
+            </fieldset><br>
+
+            <div>
+                <label for="petname">Кличка питомца</label>
+                <input type="text" size="50" id="petname" required />
+            </div><br>
+
+            <div>
+                <label for="breed">Порода питомца</label>
+                <select id="breed">
+                    <option value="abyssinian">Абиссинская</option>
+                    <option value="bengal">Бенгальская</option>
+                    <option value="devon">Девон рекс</option>
+                    <option value="egyptian">Египетская</option>
+                    <option value="cornish" selected="selected">Корниш рекс</option>
+                    <option value="munchkin">Манчкин</option>
+                    <option value="persian">Персидская</option>
+                    <option value="peterbald">Питерболд</option>
+                    <option value="sphynx">Сфинкс</option>
+                    <option value="scottish">Шотландская вислоухая</option>
+                </select>
+            </div><br>
+
+
+            <fieldset>
+                <legend>Чем питается</legend>
+                <label><input type="checkbox" name="food" value="dry" />Сухой корм</label>
+                <label><input type="checkbox" name="food" value="wet" />Влажный корм</label>
+                <label><input type="checkbox" name="food" value="natural" />Натуральный корм</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Пол питомца</legend>
+                <label><input type="radio" checked="checked" name="sex" value="male" />Самец</label>
+                <label><input type="radio" name="sex" value="female" />Самка</label>
+                <label><input type="radio" name="sex" value="god" />Божество</label>
+            </fieldset><br>
+
+            <div>
+                <label for="petphoto">Приложить фото питомца</label>
+                <input type="file" id="petphoto" />
+            </div><br>
+
+            <div>
+                <label for="comment">Комментарий владельца</label><br>
+                <textarea name="comment" cols=50 rows=10 id="comment">Ваш комментарий</textarea>
+            </div>
+
+            <input type="submit" value="Сохранить" />
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <p>Сделано с любовью</p>
+            <p>&copy; Привет от кошки Пятнышка</p>
+            <p><a
+                    href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BF%D0%BE%D1%80%D0%BE%D0%B4_%D0%BA%D0%BE%D1%88%D0%B5%D0%BA">Список
+                    пород кошек на Википедии</a></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
