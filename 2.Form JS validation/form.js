@@ -74,10 +74,10 @@ function checkAll(event) {
     && validateLogin(login) 
     && validatePassword(password)
     && validatePasswordMatch(passwordCopy)
-    && validatePhone(phone)
+    && validatePhone(phone);
 
 if (result) {
-    alert(`Добро пожаловать, ${userName}!`)
+    alert(`Добро пожаловать, ${userName}!`);
 }
 }
 
